@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Читай-Град — книжный магазин, учебная литература и книжный клуб.">
+  <title>Читай-Град — книжный магазин</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Читай-Град — главная"><span class="logo-mark">Ч</span><span>Читай-Град<small>территория историй</small></span></a>
+    <nav>
+      <a href="#catalog">Каталог</a><a href="#about">О магазине</a><a href="#news">Новости</a><a href="#club">Книжный клуб</a>
+    </nav>
+    <a class="header-button" href="#catalog">Выбрать книгу <span>↗</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">КНИЖНЫЙ МАГАЗИН · С 2024 ГОДА</p>
+        <h1>У каждой книги<br>есть <em>своя история.</em></h1>
+        <p class="hero-text">Найдите историю, которая останется с вами. Художественная литература, учебники и уютные встречи с единомышленниками.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#catalog">Найти свою книгу <span>→</span></a><a class="text-link" href="#club">Наш книжный клуб</a></div>
+        <div class="hero-note"><span class="star">✳</span><span>Место, где хочется<br>остаться ещё на главу</span></div>
+      </div>
+      <div class="hero-art" aria-label="Иллюстрация стопки книг">
+        <div class="sun"></div><div class="plant">✳</div>
+        <div class="book book-one"><span>ИСКУССТВО<br>ЧИТАТЬ</span><small>коллекция историй</small></div>
+        <div class="book book-two"><span>МАЛЕНЬКИЙ<br>ПРИНЦ</span><small>Антуан де Сент-Экзюпери</small></div>
+        <div class="book book-three"><span>НОВЫЕ<br>МИРЫ</span><small>начни с первой страницы</small></div>
+        <div class="vase"></div><p class="art-caption">Листайте. Открывайте. Влюбляйтесь.</p>
+      </div>
+    </section>
+
+    <section class="ticker"><span>ЧИТАЙ С УДОВОЛЬСТВИЕМ</span><b>✳</b><span>ОТКРЫВАЙ НОВЫЕ МИРЫ</span><b>✳</b><span>ЖИВИ МЕЖДУ СТРОК</span><b>✳</b></section>
+
+    <section class="section catalog-section" id="catalog">
+      <div class="section-heading"><div><p class="eyebrow">ТВОЯ СЛЕДУЮЩАЯ ИСТОРИЯ</p><h2>Книги, которые <em>выбирают</em></h2></div><p>От любимой классики до открытий,<br>которые ещё впереди.</p></div>
+      <div class="catalog-tools">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Название книги или автор..." aria-label="Поиск книги по названию или автору"></label>
+        <div class="filters" aria-label="Фильтр книг"><button class="filter active" data-filter="all">Все книги</button><button class="filter" data-filter="fiction">Художественные</button><button class="filter" data-filter="study">Учебные</button></div>
+      </div>
+      <div class="book-grid" id="bookGrid">
+        <article class="book-card" data-category="fiction" data-search="маленький принц антуан де сент-экзюпери"><div class="cover cover-1"><span>АНТУАН ДЕ СЕНТ-ЭКЗЮПЕРИ</span><strong>Маленький<br>принц</strong><i>✳</i></div><p class="book-type">ХУДОЖЕСТВЕННАЯ</p><h3>Маленький принц</h3><p class="author">Антуан де Сент-Экзюпери</p><div class="book-bottom"><b>450 сом</b><span>Бестселлер</span></div></article>
+        <article class="book-card" data-category="fiction" data-search="гордость и предубеждение джейн остин"><div class="cover cover-2"><span>ДЖЕЙН ОСТИН</span><strong>Гордость<br>и предубеждение</strong><i>❧</i></div><p class="book-type">КЛАССИКА</p><h3>Гордость и предубеждение</h3><p class="author">Джейн Остин</p><div class="book-bottom"><b>520 сом</b><span>Выбор клуба</span></div></article>
+        <article class="book-card" data-category="study" data-search="английский язык грамматика учебник"><div class="cover cover-3"><span>УЧЕБНАЯ СЕРИЯ</span><strong>English<br>Grammar</strong><i>A–Z</i></div><p class="book-type">УЧЕБНАЯ ЛИТЕРАТУРА</p><h3>English Grammar</h3><p class="author">Практический учебник</p><div class="book-bottom"><b>680 сом</b><span>Для учёбы</span></div></article>
+        <article class="book-card" data-category="fiction" data-search="алхимик пауло коэльо"><div class="cover cover-4"><span>ПАУЛО КОЭЛЬО</span><strong>Алхимик</strong><i>☼</i></div><p class="book-type">СОВРЕМЕННАЯ ПРОЗА</p><h3>Алхимик</h3><p class="author">Пауло Коэльо</p><div class="book-bottom"><b>490 сом</b><span>Популярное</span></div></article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>Книги не найдены. Попробуйте изменить запрос.</p>
+    </section>
+
+    <section class="reading-section" id="about">
+      <div class="reading-art"><div class="open-book"><div class="page left-page"><span>«</span><p>Книга — это мечта, которую вы держите в руках.</p><small>ЧИТАЙ-ГРАД</small></div><div class="page right-page"><span>✳</span><p>Переверните страницу.<br>Впереди целый мир.</p><button id="flipButton" aria-label="Перелистнуть страницу">Перелистнуть →</button></div></div></div>
+      <div class="reading-copy"><p class="eyebrow">НЕ ПРОСТО МАГАЗИН</p><h2>Здесь начинается<br><em>любовь к чтению.</em></h2><p>«Читай-Град» — уютное пространство для тех, кто ищет знания, вдохновение и новые впечатления. Мы собираем книги, которые хочется дарить, перечитывать и обсуждать.</p><a class="text-link" href="#club">Узнать о клубе →</a></div>
+    </section>
+
+    <section class="section news-section" id="news">
+      <div class="section-heading"><div><p class="eyebrow">ЖИЗНЬ МАГАЗИНА</p><h2>Свежие <em>истории</em></h2></div><p>Встречи, новинки и поводы<br>заглянуть к нам снова.</p></div>
+      <div class="news-grid">
+        <article class="news-card"><div class="news-visual news-visual-one"><span>✳</span><b>КНИЖНЫЙ<br>ВЕЧЕР</b></div><p class="news-date">15 НОЯБРЯ · СОБЫТИЕ</p><h3>Встреча книжного клуба: читаем вместе</h3><p>Обсудим любимые моменты, поделимся впечатлениями и найдём новые книги.</p></article>
+        <article class="news-card"><div class="news-visual news-visual-two"><span>NEW</span><b>НОВЫЕ<br>ПОСТУПЛЕНИЯ</b></div><p class="news-date">10 НОЯБРЯ · НОВИНКИ</p><h3>На полках появились новые истории</h3><p>Пополнение художественной и учебной литературы уже ждёт своих читателей.</p></article>
+        <article class="news-card"><div class="news-visual news-visual-three"><span>☼</span><b>АВТОР<br>РЯДОМ</b></div><p class="news-date">СКОРО · АНОНС</p><h3>Готовим встречу с автором</h3><p>Следите за новостями — скоро расскажем подробности творческой встречи.</p></article>
+      </div>
+    </section>
+
+    <section class="club-section" id="club"><div class="club-decoration">❧</div><p class="eyebrow">ЧИТАТЬ ВМЕСТЕ ИНТЕРЕСНЕЕ</p><h2>Одна книга.<br><em>Сотни впечатлений.</em></h2><p>Присоединяйтесь к нашему книжному клубу: знакомьтесь, обсуждайте и открывайте новые смыслы.</p><div class="club-stats"><strong>128</strong><span>читателей уже<br>в нашем клубе</span></div><a class="button button-light" href="mailto:hello@chitai-grad.example">Хочу в книжный клуб ↗</a></section>
+  </main>
+  <footer><a class="logo footer-logo" href="#home"><span class="logo-mark">Ч</span><span>Читай-Град<small>территория историй</small></span></a><p>Читайте больше. Чувствуйте глубже.</p><span>© 2026 Читай-Град</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
